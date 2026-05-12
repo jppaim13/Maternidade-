@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia do Marido Presente</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf6f1;
+    --warm: #f0e8dc;
+    --blush: #e8c9b8;
+    --terracotta: #c4705a;
+    --dark: #2c2420;
+    --mid: #7a5c52;
+    --soft: #b8907e;
+    --green: #5a8a5f;
+    --green-light: #d4e8d6;
+    --gold: #c9a96e;
+  }
+
+- { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+font-family: ‘DM Sans’, sans-serif;
+background-color: var(–cream);
+color: var(–dark);
+min-height: 100vh;
+padding: 0 0 80px 0;
+}
+
+header {
+background: var(–dark);
+color: var(–cream);
+padding: 52px 24px 44px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+header::before {
+content: ‘’;
+position: absolute;
+inset: 0;
+background: radial-gradient(ellipse at 30% 50%, rgba(196,112,90,0.3) 0%, transparent 60%),
+radial-gradient(ellipse at 80% 20%, rgba(201,169,110,0.18) 0%, transparent 50%);
+}
+
+header .eyebrow {
+font-weight: 300;
+font-size: 11px;
+letter-spacing: 4px;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 14px;
+position: relative;
+}
+
+header h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(30px, 7vw, 52px);
+line-height: 1.15;
+position: relative;
+margin-bottom: 14px;
+}
+
+header h1 em { color: var(–blush); font-style: italic; }
+
+header p {
+font-size: 14px;
+color: rgba(250,246,241,0.6);
+font-weight: 300;
+position: relative;
+}
+
+.sticky-bar {
+background: var(–warm);
+padding: 14px 20px;
+border-bottom: 1px solid var(–blush);
+position: sticky;
+top: 0;
+z-index: 100;
+display: flex;
+align-items: center;
+gap: 14px;
+}
+
+.progress-label { font-size: 11px; font-weight: 500; color: var(–mid); white-space: nowrap; }
+
+.progress-track {
+flex: 1;
+height: 5px;
+background: rgba(196,112,90,0.2);
+border-radius: 99px;
+overflow: hidden;
+}
+
+.progress-fill {
+height: 100%;
+background: linear-gradient(90deg, var(–terracotta), var(–gold));
+border-radius: 99px;
+transition: width 0.5s ease;
+width: 0%;
+}
+
+.progress-count { font-size: 13px; font-weight: 500; color: var(–terracotta); white-space: nowrap; }
+
+main { max-width: 720px; margin: 0 auto; padding: 40px 18px; }
+
+.filter-bar {
+display: flex;
+gap: 7px;
+flex-wrap: wrap;
+margin-bottom: 36px;
+}
+
+.filter-btn {
+padding: 7px 15px;
+border-radius: 99px;
+border: 1.5px solid var(–blush);
+background: white;
+font-size: 12px;
+font-family: ‘DM Sans’, sans-serif;
+cursor: pointer;
+color: var(–mid);
+font-weight: 500;
+transition: all 0.2s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+background: var(–dark);
+border-color: var(–dark);
+color: var(–cream);
+}
+
+/* –– Phase –– */
+.phase { margin-bottom: 56px; }
+
+.phase-header {
+display: flex;
+align-items: center;
+gap: 14px;
+margin-bottom: 6px;
+padding-bottom: 16px;
+border-bottom: 2px solid var(–blush);
+}
+
+.phase-icon {
+width: 48px; height: 48px;
+border-radius: 14px;
+display: flex; align-items: center; justify-content: center;
+font-size: 23px; flex-shrink: 0;
+}
+
+.p1 { background: #ede0f5; }
+.p2 { background: #fde8df; }
+.p3 { background: #ddf0e2; }
+.p4 { background: #fdf3dc; }
+.p5 { background: #dce8fd; }
+
+.phase-title h2 {
+font-family: ‘Playfair Display’, serif;
+font-size: 21px; font-weight: 700; color: var(–dark); margin-bottom: 2px;
+}
+.phase-title span { font-size: 12px; color: var(–mid); }
+
+/* –– Section label –– */
+.section-label {
+font-size: 10px;
+font-weight: 600;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: var(–soft);
+margin: 26px 0 9px;
+padding-left: 4px;
+}
+
+/* –– Items –– */
+.checklist-item {
+display: flex;
+align-items: flex-start;
+gap: 13px;
+padding: 14px 16px;
+border-radius: 12px;
+margin-bottom: 6px;
+background: white;
+border: 1.5px solid transparent;
+cursor: pointer;
+transition: all 0.2s ease;
+user-select: none;
+box-shadow: 0 1px 3px rgba(44,36,32,0.04);
+}
+
+.checklist-item:hover { border-color: var(–blush); transform: translateX(3px); }
+
+.checklist-item.checked {
+background: var(–green-light);
+border-color: #a8d4ac;
+transform: none;
+}
+
+.checklist-item.checked .item-main {
+color: var(–green);
+text-decoration: line-through;
+text-decoration-color: #a0c8a4;
+}
+
+.checklist-item.checked .item-detail { color: #8ab58e; }
+
+.checkbox {
+width: 22px; height: 22px;
+border-radius: 6px;
+border: 2px solid var(–blush);
+flex-shrink: 0; margin-top: 2px;
+display: flex; align-items: center; justify-content: center;
+transition: all 0.2s; background: white;
+}
+
+.checklist-item.checked .checkbox { background: var(–green); border-color: var(–green); }
+.checkbox svg { opacity: 0; transform: scale(0.4); transition: all 0.2s; }
+.checklist-item.checked .checkbox svg { opacity: 1; transform: scale(1); }
+
+.item-content { flex: 1; min-width: 0; }
+
+.item-main {
+font-size: 14px; line-height: 1.5;
+color: var(–dark); font-weight: 500;
+transition: all 0.2s;
+}
+
+.item-detail {
+font-size: 12.5px; color: #9a7068;
+line-height: 1.6; margin-top: 4px;
+font-weight: 300;
+}
+
+.item-tag {
+font-size: 10px; padding: 3px 9px;
+border-radius: 99px; font-weight: 600;
+flex-shrink: 0; margin-top: 2px;
+height: fit-content; letter-spacing: 0.3px;
+}
+
+.tag-fisica  { background: #fde8e0; color: #b85a42; }
+.tag-mental  { background: #e4e8fd; color: #4a5ab8; }
+.tag-pratico { background: #e0fde8; color: #2e7a42; }
+.tag-bebe    { background: #fdf0dc; color: #9a6820; }
+
+/* –– Alert box –– */
+.alert-box {
+background: #fff8f0;
+border-left: 4px solid var(–terracotta);
+border-radius: 0 10px 10px 0;
+padding: 13px 16px;
+margin: 18px 0 4px;
+font-size: 13px;
+color: #8a4030;
+line-height: 1.65;
+}
+.alert-box strong {
+display: block; margin-bottom: 3px;
+font-size: 10.5px; letter-spacing: 1.5px;
+text-transform: uppercase; color: var(–terracotta);
+}
+
+/* –– Completion –– */
+.completed-message { text-align: center; padding: 50px 20px; display: none; }
+.completed-message.show { display: block; }
+.completed-message h3 { font-family: ‘Playfair Display’, serif; font-size: 26px; color: var(–terracotta); margin-bottom: 10px; }
+.completed-message p { font-size: 14px; color: var(–mid); line-height: 1.7; }
+.reset-btn {
+margin-top: 22px; padding: 11px 28px;
+background: var(–dark); color: var(–cream);
+border: none; border-radius: 9px;
+font-size: 13px; font-family: ‘DM Sans’, sans-serif;
+cursor: pointer; transition: opacity 0.2s;
+}
+.reset-btn:hover { opacity: 0.8; }
+
+@media (max-width: 480px) {
+header { padding: 38px 18px 34px; }
+main { padding: 28px 14px; }
+.checklist-item { padding: 12px 13px; gap: 11px; }
+.item-main { font-size: 13.5px; }
+.item-detail { font-size: 12px; }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Para o marido presente</div>
+  <h1>Cuidar de <em>você</em><br>é cuidar de nós</h1>
+  <p>Checklist completo — 25ª semana ao 6º mês pós-parto</p>
+</header>
+
+<div class="sticky-bar">
+  <span class="progress-label">Progresso</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <span class="progress-count" id="progressCount">0 / 0</span>
+</div>
+
+<main>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterItems('all',this)">Todos</button>
+    <button class="filter-btn" onclick="filterItems('fisica',this)">🫶 Saúde Física</button>
+    <button class="filter-btn" onclick="filterItems('mental',this)">🧠 Saúde Mental</button>
+    <button class="filter-btn" onclick="filterItems('pratico',this)">🔧 Prático</button>
+    <button class="filter-btn" onclick="filterItems('bebe',this)">👶 Cuidados do Bebê</button>
+  </div>
+
+  <!-- ══════════ FASE 1 ══════════ -->
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-icon p1">🌱</div>
+      <div class="phase-title">
+        <h2>3º Trimestre</h2>
+        <span>25ª semana até o parto — reta final</span>
+      </div>
+    </div>
+
+```
+<div class="section-label">Consultas & Exames</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Acompanhar as consultas de pré-natal — todas</div>
+    <div class="item-detail">Consultas nas semanas 30, 34, 36, 38 e 40. A partir da 36ª semana, passam a ser semanais. Leve um bloco de notas e anote perguntas com antecedência.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Entender os exames do 3º trimestre</div>
+    <div class="item-detail">Ultrassom com Doppler (fluxo sanguíneo e crescimento), cardiotocografia (batimentos e contrações), teste do cotonete vaginal para Streptococcus B entre 35ª–37ª semana (positivo exige antibiótico no parto), hemograma e pressão arterial em toda consulta.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Fazer consulta pré-natal com o pediatra escolhido</div>
+    <div class="item-detail">Recomendado ainda no último trimestre. O pediatra orienta sobre os primeiros cuidados, triagem neonatal, amamentação e calendário vacinal antes mesmo do bebê nascer.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Organizar e controlar os suplementos prescritos</div>
+    <div class="item-detail">Ácido fólico, sulfato ferroso, cálcio, vitamina D e ômega-3 são os mais comuns. Monte uma grade de horários e reponha antes de acabar.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="section-label">Conforto Físico & Sintomas</div>
+
+<div class="alert-box">
+  <strong>⚠ Sintomas comuns que você deve conhecer</strong>
+  No 3º trimestre ela pode sentir: dor lombar e pélvica intensa, inchaço nos pés e tornozelos, azia e refluxo, falta de ar, câimbras, contrações de Braxton Hicks (falsas), insônia e cansaço extremo. Todos normais — mas seu papel é aliviar, não minimizar.
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Preparar o ambiente de sono com travesseiro de gestante</div>
+    <div class="item-detail">Dormir de lado esquerdo melhora a circulação e facilita a respiração. Travesseiro entre os joelhos e sob a barriga alivia a pressão lombar. Ajude a encontrar a posição toda noite.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Oferecer massagem regular nas costas, lombar, pés e panturrilhas</div>
+    <div class="item-detail">O peso do bebê desloca o eixo de gravidade e sobrecarrega a lombar. Câimbras nas pernas são muito comuns à noite. Massagem suave e frequente reduz dor, melhora circulação e promove relaxamento.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Ajudar a controlar o inchaço nos pés e pernas</div>
+    <div class="item-detail">Incentivar elevação dos pés em repouso, 8+ copos de água por dia e meias de compressão se indicadas pelo médico. Evite passeios longos no calor intenso e ficar muito tempo em pé ou sentada sem mover-se.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Preparar refeições que aliviem azia, refluxo e prisão de ventre</div>
+    <div class="item-detail">Refeições pequenas e frequentes (a cada 2–3h) evitam azia. Evite frituras, alimentos condimentados e gordurosos. Para prisão de ventre: fibras (frutas, grãos integrais, verduras) e muita hidratação. Não deitar logo após comer.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Incentivar e acompanhar atividades físicas leves</div>
+    <div class="item-detail">Caminhadas, yoga pré-natal e pilates melhoram circulação, reduzem inchaço, aliviam dores e preparam o corpo para o parto. A regra de ouro: conseguir manter uma conversa durante o exercício. Sempre com orientação médica.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Assumir todas as tarefas físicas pesadas da casa</div>
+    <div class="item-detail">Agachar, subir escada, carregar peso, limpar chão — tudo isso gera sobrecarga lombar e risco de queda. Ela pode e deve descansar sem culpa.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Conhecer os sinais de alerta que exigem ida urgente ao hospital</div>
+    <div class="item-detail">Vá imediatamente: contrações regulares e progressivas, rompimento da bolsa, sangramento intenso, diminuição ou ausência de movimentos fetais, dor forte entre contrações, visão turva, inchaço súbito no rosto, falta de ar intensa ou lábios azulados.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Entender a diferença entre contrações reais e Braxton Hicks</div>
+    <div class="item-detail">Braxton Hicks: irregulares, não aumentam em intensidade, passam com mudança de posição ou hidratação. Contrações reais: regulares, progressivas, mais intensas com o tempo, não passam com repouso. Saiba reconhecer antes que aconteça.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="section-label">Saúde Mental & Emocional</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Perguntar como ela está — e ouvir de verdade, sem resolver</div>
+    <div class="item-detail">Ansiedade com o parto, medo da dor, insegurança sobre ser mãe e sensação de perda da identidade são universais nessa fase. Ela não precisa de solução — precisa ser ouvida sem julgamento.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Participar e valorizar o instinto de "nesting" dela</div>
+    <div class="item-detail">O desejo de organizar tudo, preparar o quarto e "ter tudo no lugar" é um comportamento natural e saudável. Não questione a urgência — ajude com entusiasmo. Para ela, isso é cuidado e amor.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Elogiar o corpo dela com frequência e genuinidade</div>
+    <div class="item-detail">Barriga crescendo, manchas de melasma, estrias, linha nigra escurecida — ela percebe cada mudança. Dizer que ela está bonita e que você a deseja nesse processo faz diferença real no bem-estar emocional dela.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Fazer programa a dois antes da vida mudar completamente</div>
+    <div class="item-detail">Jantar especial, cinema, viagem curta, final de semana diferente. Esse tempo de casal antes do bebê é valioso — e ela vai lembrar disso com carinho.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Ler sobre parto, puerpério e amamentação — não deixar só por conta dela</div>
+    <div class="item-detail">Entender as fases do trabalho de parto, o que é baby blues vs. depressão pós-parto, como funciona o leite materno, as fases do puerpério. Você apoia melhor o que você conhece.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Dividir ativamente o planejamento — não deixar tudo na mão dela</div>
+    <div class="item-detail">Nome, quarto, plano de parto, enxoval, pediatra — decidir junto. A sensação de estar sozinha no planejamento gera sobrecarga, ansiedade e ressentimento silencioso.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Atenção a sinais de alerta emocional antes do parto</div>
+    <div class="item-detail">Se ela apresentar ansiedade que interfere nas atividades diárias, insônia completa, isolamento social, tristeza persistente ou sensação de desespero por mais de 2 semanas — considere apoio psicológico. Isso não é fraqueza, é cuidado.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="section-label">Organização Prática</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Montar e testar berço, carrinho e cadeirinha do carro</div>
+    <div class="item-detail">Faça isso antes da 36ª semana. Cadeirinha deve estar instalada corretamente — é obrigatória por lei e pode salvar a vida do bebê. Verifique se o berço está nivelado e que não haja objetos moles dentro.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Organizar a mala maternidade até a 36ª semana</div>
+    <div class="item-detail">Mala dela: documentos (carteirinha, exames, plano de parto), roupas confortáveis, sutiã de amamentação, absorvente pós-parto extra, itens de higiene. Mala do bebê: bodies, macacões, manta, fraldas recém-nascido, toalha, pomada.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Planejar o percurso até a maternidade com rota alternativa</div>
+    <div class="item-detail">Faça o trajeto no horário de pico para saber o tempo real. Tenha rota alternativa em caso de trânsito. Deixe o carro sempre abastecido. Saiba onde estacionar e qual entrada usar.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Fazer curso de primeiros socorros para bebês</div>
+    <div class="item-detail">Engasgamento, convulsão, queda — saber o que fazer pode salvar a vida. Busque cursos presenciais ou online com certificação. A Sociedade Brasileira de Pediatria tem materiais gratuitos.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Definir e registrar o plano de parto com a equipe médica</div>
+    <div class="item-detail">Tipo de parto desejado, preferências sobre analgesia, acompanhante na sala, corte do cordão umbilical, contato pele a pele na primeira hora (Golden Hour), amamentação na maternidade. Leve impresso e em PDF.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Organizar a licença-paternidade e impacto financeiro</div>
+    <div class="item-detail">Conversar com RH sobre duração e regras da licença. Prever custos: fraldas, plano de saúde do bebê, consultas pediátricas, amamentadeira se necessário, roupas, eventuais cuidadores.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Abastecer a casa com tudo para o pós-parto antes do bebê chegar</div>
+    <div class="item-detail">Absorventes pós-parto (muito maiores que os normais — compre em quantidade), fraldas RN e P, pomada para assadura, soro fisiológico, algodão, álcool 70%, pomada para fissura no mamilo (lanolina), termômetro digital, aspirador nasal.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Criar lista de contatos de emergência e rede de apoio</div>
+    <div class="item-detail">Obstetra, maternidade, pediatra já escolhido, familiares próximos, pessoa de confiança que pode chegar rápido. Tudo salvo no celular e num papel na geladeira.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+```
+
+  </div>
+
+  <!-- ══════════ FASE 2 ══════════ -->
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-icon p2">🏥</div>
+      <div class="phase-title">
+        <h2>No Parto</h2>
+        <span>Dia do nascimento — sua presença importa muito</span>
+      </div>
+    </div>
+
+```
+<div class="section-label">Suporte & Presença</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Manter a calma — ela vai sentir sua energia</div>
+    <div class="item-detail">Medo e estresse podem prolongar o trabalho de parto. Sua tranquilidade é literal e fisiologicamente útil. Respire fundo, fale com suavidade, mantenha-se presente.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Segurar a mão, fazer contato visual e encorajar — sem pressionar</div>
+    <div class="item-detail">Frases como "você está indo muito bem", "estou aqui" e "você consegue" têm impacto real. Evite dar conselhos sobre respiração ou posição a menos que ela peça.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Ser o porta-voz dela com a equipe médica</div>
+    <div class="item-detail">Se ela não estiver em condições de falar, você fala. Conhecer o plano de parto com antecedência é essencial para defender as escolhas dela nesse momento.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Oferecer água, gelo, massagem nas costas durante as contrações</div>
+    <div class="item-detail">Nas contrações, pressão firme na lombar alivia a dor. Gelo na testa ou nuca refresca. Água pequenos goles. Pergunte o que ela quer em cada momento — não assuma.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Valorizar e proteger a Golden Hour — primeira hora pele a pele</div>
+    <div class="item-detail">Se o bebê está bem ao nascer, o contato pele a pele imediato com a mãe por pelo menos 1 hora é recomendado pela SBP. Ajuda na amamentação, no vínculo e evita hipotermia. Medidas burocráticas (peso, vacinas) devem aguardar essa hora.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Cuidar dos avisos para a família — ela não deve se preocupar com isso</div>
+    <div class="item-detail">Decida com ela com antecedência quem avisar, quando e como. Mensagem em grupo com atualização no momento certo. Filtre quem chega ao hospital.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Registrar o momento só com autorização dela</div>
+    <div class="item-detail">Fotos e vídeos são lindos mas devem ser uma escolha dela. Combine antes. No momento do parto em si, o celular fica guardado — sua presença vale mais que qualquer registro.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+```
+
+  </div>
+
+  <!-- ══════════ FASE 3 ══════════ -->
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-icon p3">🌸</div>
+      <div class="phase-title">
+        <h2>Puerpério Imediato</h2>
+        <span>1ª e 2ª semana após o parto</span>
+      </div>
+    </div>
+
+```
+<div class="section-label">Cuidados com o Bebê — Primeiros Dias</div>
+
+<div class="alert-box">
+  <strong>📋 Triagem Neonatal — prazos obrigatórios</strong>
+  Teste do Olhinho: logo após o nascimento na maternidade. Teste do Coraçãozinho: 24–48h após o nascimento. Teste do Pezinho: 3º ao 5º dia de vida (vai à UBS). Teste da Orelhinha: antes da alta ou na 1ª consulta pediátrica. Teste da Linguinha: na maternidade ou 1ª consulta. Todos gratuitos pelo SUS.
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Garantir que todos os testes da triagem neonatal sejam feitos nos prazos</div>
+    <div class="item-detail">Seja você quem anota, agenda e lembra. O teste do pezinho em especial precisa ser feito do 3º ao 5º dia — quanto mais cedo a detecção de doenças metabólicas, melhor o tratamento.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Acompanhar e garantir as vacinas da maternidade e do 1º mês</div>
+    <div class="item-detail">Na maternidade: BCG (tuberculose) e Hepatite B (1ª dose). Até 30 dias: BCG se não aplicado. Aos 2 meses: Hexavalente e Rotavírus. Aos 3 meses: Meningocócica. Guarde a carteirinha de vacinação com cuidado — é um documento.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Agendar a primeira consulta pediátrica até o 15º dia de vida</div>
+    <div class="item-detail">Nessa consulta o pediatra verifica se o bebê recuperou o peso (perda de até 10% é normal na 1ª semana), avalia icterícia, coto umbilical, reflexos e amamentação.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Aprender e assumir as trocas de fraldas e o banho do bebê</div>
+    <div class="item-detail">Troca em média 8–12 vezes ao dia. No banho: água morna (~37°C), suporte firme na cabeça, sabonete neutro, secar bem as dobras. Coto umbilical: limpe com álcool 70% e deixe secar — cai sozinho entre 7 e 21 dias.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Conhecer a posição segura de dormir do bebê</div>
+    <div class="item-detail">Sempre de costas (decúbito dorsal), berço firme sem travesseiros, almofadas ou bichos de pelúcia. Nunca dormir junto na cama dos pais. Proibido fumar no mesmo ambiente — é fator de risco para morte súbita do lactente.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Apoiar ativamente a amamentação</div>
+    <div class="item-detail">Traga o bebê quando for mamar, ofereça copo de água a cada mamada (a mãe precisa de hidratação extra), busque travesseiros de apoio, pesquise consultoras de amamentação se ela tiver dificuldade. O leite materno é o único alimento necessário até os 6 meses (OMS e SBP).</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="section-label">Saúde Física da Mãe</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Assumir 100% das tarefas domésticas — ela não faz esforço</div>
+    <div class="item-detail">Nos primeiros 10 dias o corpo está se recuperando da maior experiência física da vida. Cozinhar, lavar, limpar, carregar peso — tudo é com você. Sem negociação.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Garantir alimentação e hidratação dela — especialmente na amamentação</div>
+    <div class="item-detail">Mãe que amamenta precisa de calorias e líquidos extras. Prepare refeições nutritivas mesmo que simples. Deixe frutas, snacks e água ao alcance onde ela amamentar. Ela não pode depender de lembrar de comer.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Observar os pontos (cesárea ou episiotomia) e lóquios</div>
+    <div class="item-detail">Lóquio é a secreção vaginal normal pós-parto — começa avermelhado e vai clareando. Sinais de alerta: febre acima de 38°C, dor intensa nos pontos, odor fétido, inchaço ou vermelhidão excessiva — procurar médico imediatamente.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Proteger e priorizar o sono dela — assuma os turnos da madrugada</div>
+    <div class="item-detail">Privação de sono é o fator que mais compromete a saúde mental no puerpério. Sempre que possível, assuma o turno da madrugada. Mesmo que ela amamente, você pode trazer o bebê e depois trocar e acalentar.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="section-label">Saúde Mental da Mãe</div>
+
+<div class="alert-box">
+  <strong>💙 Baby Blues vs. Depressão Pós-Parto</strong>
+  Baby Blues: choro fácil, tristeza, oscilação de humor nos primeiros dias — normal, afeta até 80% das mães, passa em até 2 semanas. Depressão pós-parto: sintomas persistem além de 2 semanas, são intensos, interferem na rotina e no vínculo com o bebê — afeta 20–35% das mulheres. Exige tratamento profissional.
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Estar presente e acolher sem resolver — ela não precisa ser forte</div>
+    <div class="item-detail">Não diga "é normal", "vai passar", "outras mães aguentam". Diga "estou aqui", "me conta o que está sentindo", "você está indo muito bem". Sua presença e afeto valem mais que qualquer conselho.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Filtrar e controlar as visitas nos primeiros dias</div>
+    <div class="item-detail">Visitas excessivas cansam fisicamente e emocionalmente. Decida com ela quem pode vir e quando. Você é a barreira. "Ela está descansando" é uma frase que você pode — e deve — usar sem culpa.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Nunca comparar — nem com outras mães, nem com o "ideal"</div>
+    <div class="item-detail">Comparações com amigas, mães famosas, ou a própria mãe de vocês são destruidoras nesse momento. Cada mulher, cada bebê, cada parto é único. Ela está fazendo certo do jeito dela.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Dizer "você está indo muito bem" — com frequência e sinceridade</div>
+    <div class="item-detail">Insegurança de ser mãe pela primeira vez é intensa. Validar cada pequena conquista — acalmar o bebê, amamentar, trocar fralda — tem impacto real no estado emocional dela.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+```
+
+  </div>
+
+  <!-- ══════════ FASE 4 ══════════ -->
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-icon p4">💛</div>
+      <div class="phase-title">
+        <h2>Puerpério Tardio</h2>
+        <span>2ª semana ao 45º dia</span>
+      </div>
+    </div>
+
+```
+<div class="section-label">Saúde Física</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Acompanhá-la na consulta de revisão puerperal (5º–7º dia e 6 semanas)</div>
+    <div class="item-detail">A OMS recomenda ao menos 3 consultas pós-natais nas primeiras 6 semanas. Nessas consultas: avaliação dos pontos, pressão, amamentação, e triagem para depressão pós-parto. Sua presença mostra que você é parceiro, não ajudante.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Incentivar e viabilizar a fisioterapia pélvica</div>
+    <div class="item-detail">Incontinência urinária, dor pélvica e disfunção do assoalho pélvico são comuns após o parto e têm tratamento. A fisioterapia pélvica não é luxo — é reabilitação. Ajude logisticamente: cuide do bebê enquanto ela vai.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Continuar com as tarefas pesadas mesmo quando ela "parece bem"</div>
+    <div class="item-detail">Recuperação real demora mais que a recuperação aparente. O corpo precisar de semanas para cicatrizar internamente. Não espere ela pedir — continue assumindo o que é pesado.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Apoiar (sem cobrar) a retomada gradual da atividade física</div>
+    <div class="item-detail">Caminhadas leves podem voltar com liberação médica após a revisão de 6 semanas. Exercícios de impacto esperam mais. O ritmo é dela — seu papel é viabilizar, não pressionar.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="section-label">Saúde Mental</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Reconhecer os sinais de depressão pós-parto e agir sem demora</div>
+    <div class="item-detail">Fique atento: tristeza intensa por mais de 2 semanas, choro excessivo sem motivo claro, dificuldade de se vincular ao bebê, sensação de inutilidade ou culpa intensa, pensamentos de se machucar ou machucar o bebê. Qualquer sinal persistente: procure ajuda imediata — médico, psiquiatra ou psicólogo.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Dar a ela tempo para si mesma — banho longo, sair sozinha, descansar</div>
+    <div class="item-detail">Fique com o bebê para ela ter 30–60 minutos só dela regularmente. Não pergunte "o que você vai fazer" — só diga "vai, eu fico aqui". Esse tempo é terapêutico.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Manter a conexão do casal — conversar sobre sentimentos, não só sobre o bebê</div>
+    <div class="item-detail">É fácil o casal se transformar apenas em "pai e mãe" e esquecer que são marido e mulher. Reserve momentos, mesmo que curtos, só de vocês dois. Pergunte como ela está — não como o bebê está.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Respeitar completamente o tempo de retomada da vida íntima</div>
+    <div class="item-detail">A liberação médica é em média na consulta das 6 semanas — mas isso é um mínimo clínico, não uma data no calendário. Ela pode precisar de mais tempo, física e emocionalmente. Sem pressão, sem cobranças veladas.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Considerar terapia de casal ou individual se necessário</div>
+    <div class="item-detail">A chegada de um bebê é um dos maiores estressores de um relacionamento. Buscar apoio profissional não é sinal de crise — é prevenção inteligente e cuidado com os dois.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="section-label">Rotina com o Bebê</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Dividir trocas de fralda, banho e turnos da madrugada com clareza</div>
+    <div class="item-detail">Não espere ser chamado — tome iniciativa. "Eu fico com ele essa noite" é um dos maiores presentes que você pode dar a ela. Bebês mamam a cada 2–3h no início: a privação de sono dela é real e acumulada.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Conhecer os marcos de desenvolvimento e sinais de alerta do bebê</div>
+    <div class="item-detail">Até 1 mês: reage a sons, foca rosto próximo. 2 meses: sorri socialmente. 3 meses: sustenta a cabeça. Acompanhe a caderneta de saúde. Se algo não aparecer no prazo, converse com o pediatra — não espere.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Conversar, cantar e fazer contato visual com o bebê — você também é vínculo</div>
+    <div class="item-detail">Bebês reconhecem a voz do pai desde o nascimento. Interação afetiva estimula desenvolvimento social, cognitivo e emocional. Não deixe o vínculo com o bebê ser só da mãe.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+```
+
+  </div>
+
+  <!-- ══════════ FASE 5 ══════════ -->
+
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-icon p5">🌿</div>
+      <div class="phase-title">
+        <h2>Pós-Puerpério</h2>
+        <span>45º dia ao 6º mês — nova fase do casal</span>
+      </div>
+    </div>
+
+```
+<div class="section-label">Saúde da Mãe</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="fisica">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Acompanhar a retomada da atividade física e do autocuidado dela</div>
+    <div class="item-detail">Cuide do bebê para ela ir à academia, pilates, caminhar ou fazer o que ela quiser. Não é favor — é parte da sua responsabilidade como parceiro.</div>
+  </div>
+  <span class="item-tag tag-fisica">Física</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Manter o olhar atento — depressão pós-parto pode surgir meses depois</div>
+    <div class="item-detail">Os sintomas podem aparecer até 1 ano após o parto. Não baixe a guarda. Se ela parecer diferente — mais fechada, triste, sem energia, distante do bebê — converse com delicadeza e proponha ajuda profissional.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="section-label">Cuidados Contínuos com o Bebê</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Manter o calendário de consultas pediátricas e vacinas em dia</div>
+    <div class="item-detail">Consultas de rotina: 15 dias, 1 mês, 2 meses, 4 meses, 6 meses. Aos 2 meses: Hexavalente + Rotavírus. Aos 3 meses: Meningocócica B. Aos 4 meses: Hexavalente + Rotavírus 2ª dose. Aos 5 meses: Meningocócica. Guarde e leve sempre a Caderneta de Saúde da Criança.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="bebe">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Criar ambiente seguro para o bebê conforme ele ganha mobilidade</div>
+    <div class="item-detail">A partir do 3º mês ele começa a rolar. Prevenir: nunca deixar sozinho em superfície elevada, tampa de tomadas, nada pequeno ao alcance, nada inflamável perto. A segurança vai crescendo com ele.</div>
+  </div>
+  <span class="item-tag tag-bebe">Bebê</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="pratico">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Planejar logisticamente a volta dela ao trabalho (se houver)</div>
+    <div class="item-detail">Defina com antecedência: quem cuida do bebê, amamentação x fórmula, rotina de saída e chegada, plano B para emergências. Não deixe esse planejamento só para ela resolver.</div>
+  </div>
+  <span class="item-tag tag-pratico">Prático</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Celebrar as conquistas — do bebê e dela</div>
+    <div class="item-detail">Primeiro sorriso, primeiras semanas de amamentação superadas, volta à academia, primeiro saída noturna a dois. Celebre. Marque. Registre. Esse período passa rápido e merece ser valorizado.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+
+<div class="checklist-item" onclick="toggle(this)" data-tag="mental">
+  <div class="checkbox"><svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5L4.5 8.5L11 1" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="item-content">
+    <div class="item-main">Cuidar de você também — pai exausto não cuida bem</div>
+    <div class="item-detail">Depressão pós-parto também afeta homens. Se você estiver com irritabilidade, tristeza, ansiedade intensa ou sentindo que está falhando — busque ajuda. Pai saudável é o melhor presente para a família.</div>
+  </div>
+  <span class="item-tag tag-mental">Mental</span>
+</div>
+```
+
+  </div>
+
+  <div class="completed-message" id="completedMsg">
+    <h3>Você é incrível 💛</h3>
+    <p>Cuidar com atenção e presença é o maior ato de amor.<br>Sua esposa tem sorte de ter você ao lado nessa jornada.</p>
+    <button class="reset-btn" onclick="resetAll()">Recomeçar checklist</button>
+  </div>
+
+</main>
+
+<script>
+  const STORAGE_KEY = 'checklist-marido-v2';
+
+  function getState() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
+  }
+
+  function saveState(state) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch {}
+  }
+
+  function toggle(el) {
+    el.classList.toggle('checked');
+    const allItems = document.querySelectorAll('.checklist-item');
+    const state = {};
+    allItems.forEach((item, i) => { state[i] = item.classList.contains('checked'); });
+    saveState(state);
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const visible = Array.from(document.querySelectorAll('.checklist-item')).filter(el => el.style.display !== 'none');
+    const checked = visible.filter(el => el.classList.contains('checked'));
+    const total = visible.length;
+    const done = checked.length;
+    const pct = total > 0 ? (done / total) * 100 : 0;
+
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressCount').textContent = done + ' / ' + total;
+
+    const allItems = document.querySelectorAll('.checklist-item');
+    const allChecked = Array.from(allItems).filter(el => el.classList.contains('checked'));
+    if (allItems.length > 0 && allItems.length === allChecked.length) {
+      document.getElementById('completedMsg').classList.add('show');
+    } else {
+      document.getElementById('completedMsg').classList.remove('show');
+    }
+  }
+
+  function filterItems(tag, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    document.querySelectorAll('.checklist-item').forEach(item => {
+      item.style.display = (tag === 'all' || item.dataset.tag === tag) ? 'flex' : 'none';
+    });
+
+    document.querySelectorAll('.section-label, .alert-box').forEach(el => {
+      el.style.display = 'block';
+    });
+
+    updateProgress();
+  }
+
+  function resetAll() {
+    document.querySelectorAll('.checklist-item').forEach(el => el.classList.remove('checked'));
+    saveState({});
+    updateProgress();
+  }
+
+  // Restore state on load
+  const state = getState();
+  const allItems = document.querySelectorAll('.checklist-item');
+  allItems.forEach((item, i) => {
+    if (state[i]) item.classList.add('checked');
+  });
+
+  updateProgress();
+</script>
+
+</body>
+</html>
